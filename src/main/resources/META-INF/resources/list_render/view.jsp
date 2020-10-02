@@ -26,7 +26,7 @@
     <c:when test="<%= !cpCatalogEntries.isEmpty() %>">
         <div class="container text-center my-3">
             <div class="row mx-auto my-auto">
-                <div id="myCarousel" class="carousel slide w-100"  data-interval="false">
+                <div id="<portlet:namespace />myCarousel" class="carousel slide w-100"  data-interval="false">
                     <div class="carousel-inner w-100" role="listbox">
 
         <%
@@ -56,11 +56,11 @@
             }
         %>
                     </div>
-                    <a class="carousel-control-prev bg-dark w-auto" href="#myCarousel" role="button" data-slide="prev">
+                    <a class="carousel-control-prev bg-dark w-auto" href="#<portlet:namespace />myCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next bg-dark w-auto" href="#myCarousel" role="button" data-slide="next">
+                    <a class="carousel-control-next bg-dark w-auto" href="#<portlet:namespace />myCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -79,14 +79,11 @@
 
 <script>
 
-    console.log("In the script");
-    $('#myCarousel').carousel({
+    $('#<portlet:namespace />myCarousel').carousel({
         interval: 10000
     })
 
     $('.carousel .carousel-item').each(function(){
-
-        console.log("In the item");
 
         var minPerSlide = 3;
         var next = $(this).next();
