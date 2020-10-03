@@ -19,7 +19,6 @@
     CommerceContext commerceContext = (CommerceContext)request.getAttribute(CommerceWebKeys.COMMERCE_CONTEXT);
 
     int counter = 0;
-
 %>
 
 <c:choose>
@@ -42,15 +41,14 @@
                 }
             %>
 
-                    <div class="carousel-item <%= active%>">
-                        <div class="col-lg-2">
-                            <a href="<%= friendlyURL %>"><img class="img-fluid" src="<%= thumbnailSrc %>"></a>
-                            <div class-"product-name">
-                                <a href="<%= friendlyURL %>"><%= cpCatalogEntry.getName() %></a>
+                        <div class="carousel-item <%= active%>">
+                            <div class="col-lg-2">
+                                <a href="<%= friendlyURL %>"><img class="img-fluid" src="<%= thumbnailSrc %>"></a>
+                                <div class-"product-name">
+                                    <a href="<%= friendlyURL %>"><%= cpCatalogEntry.getName() %></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
         <%
                 counter++;
             }
@@ -76,14 +74,13 @@
     </c:otherwise>
 </c:choose>
 
-
 <script>
 
     $('#<portlet:namespace />myCarousel').carousel({
         interval: 10000
     })
 
-    $('.carousel .carousel-item').each(function(){
+    $('#<portlet:namespace />myCarousel .carousel-item').each(function(){
 
         var minPerSlide = 3;
         var next = $(this).next();
