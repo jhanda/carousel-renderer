@@ -1,13 +1,3 @@
-<%@ page import="com.liferay.commerce.product.content.util.CPContentHelper" %>
-<%@ page import="com.liferay.commerce.product.content.constants.CPContentWebKeys" %>
-<%@ page import="com.liferay.commerce.product.util.CPInstanceHelper" %>
-<%@ page import="com.liferay.commerce.product.data.source.CPDataSourceResult" %>
-<%@ page import="com.liferay.commerce.product.constants.CPWebKeys" %>
-<%@ page import="com.liferay.commerce.product.catalog.CPCatalogEntry" %>
-<%@ page import="com.liferay.commerce.context.CommerceContext" %>
-<%@ page import="com.liferay.commerce.constants.CommerceWebKeys" %>
-<%@ page import="com.liferay.commerce.product.catalog.CPSku" %>
-<%@ page import="java.util.List" %>
 <%@ include file="/META-INF/resources/init.jsp" %>
 
 <%
@@ -16,7 +6,6 @@
     CPDataSourceResult cpDataSourceResult = (CPDataSourceResult)request.getAttribute(CPWebKeys.CP_DATA_SOURCE_RESULT);
 
     List<CPCatalogEntry> cpCatalogEntries = cpDataSourceResult.getCPCatalogEntries();
-    CommerceContext commerceContext = (CommerceContext)request.getAttribute(CommerceWebKeys.COMMERCE_CONTEXT);
 
     int counter = 0;
 %>

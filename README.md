@@ -13,7 +13,7 @@ This module provides a carousel view in the Product List Renderer.  For best res
 
 ## Installation
 
-- Download the `.jar` file in [releases](https://github.com/jhanda/carousel-renderer/releases/tag/1.0.0) and deploy it 
+- Download the `.jar` file in [releases](https://github.com/jhanda/carousel-renderer/releases/tag/1.0.2) and deploy it 
 into Liferay.
 
 or
