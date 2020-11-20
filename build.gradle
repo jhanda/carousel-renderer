@@ -10,12 +10,13 @@ dependencies {
 
 
 	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib", version: "3.5.0"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.api", version: "22.1.1"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.content.api", version: "3.0.3"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.type.simple", version: "1.0.0"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.frontend.taglib", version: "7.2.1"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.api", version: "19.1.1"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.currency.api", version: "3.2.1"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.taglib", version: "2.2.2"
-	compile group: 'com.liferay.portal', name: 'release.portal.api', version: '7.2.0'
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.api"
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.content.api"
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.type.simple"
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.frontend.taglib"
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.api"
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.currency.api"
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.taglib"
+
+	compile group: 'com.liferay.portal', name: 'release.dxp.bom', version: '7.3.10', ext: 'pom'
 }
