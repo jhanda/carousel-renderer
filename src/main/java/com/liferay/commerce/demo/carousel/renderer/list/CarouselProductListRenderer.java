@@ -24,7 +24,8 @@ import java.util.ResourceBundle;
         property = {
                 "commerce.product.content.list.renderer.key=" + CarouselProductListRenderer.KEY,
                 "commerce.product.content.list.renderer.order=250",
-                "commerce.product.content.list.renderer.portlet.name=" + CPPortletKeys.CP_PUBLISHER_WEB
+                "commerce.product.content.list.renderer.portlet.name=" + CPPortletKeys.CP_PUBLISHER_WEB,
+                "commerce.product.content.list.renderer.portlet.name=" + CPPortletKeys.CP_COMPARE_CONTENT_WEB
         },
         service = CPContentListRenderer.class
 )
