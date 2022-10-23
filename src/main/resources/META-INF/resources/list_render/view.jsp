@@ -1,3 +1,9 @@
+<%@ page import="com.liferay.commerce.context.CommerceContext" %>
+<%@ page import="com.liferay.commerce.model.CommerceOrder" %>
+<%@ page import="com.liferay.commerce.constants.CommerceCheckoutWebKeys" %>
+<%@ page import="com.liferay.portal.kernel.util.WebKeys" %>
+<%@ page import="com.liferay.commerce.constants.CommerceWebKeys" %>
+<%@ page import="com.liferay.commerce.account.model.CommerceAccount" %>
 <%@ include file="/META-INF/resources/init.jsp" %>
 
 <%
@@ -5,6 +11,8 @@
     CPInstanceHelper cpInstanceHelper = (CPInstanceHelper)request.getAttribute("cpInstanceHelper");
     CPDataSourceResult cpDataSourceResult = (CPDataSourceResult)request.getAttribute(CPWebKeys.CP_DATA_SOURCE_RESULT);
     List<CPCatalogEntry> cpCatalogEntries = cpDataSourceResult.getCPCatalogEntries();
+    CommerceContext commerceContext = (CommerceContext)request.getAttribute(CommerceWebKeys.COMMERCE_CONTEXT);
+    CommerceAccount commerceAccount = commerceContext.getCommerceAccount();
 %>
 
 <c:choose>
@@ -17,7 +25,7 @@
                 String friendlyURL = cpContentHelper.getFriendlyURL(cpCatalogEntry, themeDisplay);
                 List<CPSku> cpSkus = cpCatalogEntry.getCPSkus();
                 long cpInstanceId = cpSkus.get(0).getCPInstanceId();
-                String thumbnailSrc = cpInstanceHelper.getCPInstanceThumbnailSrc(cpInstanceId);
+                String thumbnailSrc = cpInstanceHelper.getCPInstanceThumbnailSrc(commerceAccount.getCommerceAccountId(), cpInstanceId);
         %>
                 <div class="card" style="margin: 5px;">
                     <a href="<%= friendlyURL %>"><img class="card-img-top img-fluid" src="<%= thumbnailSrc %>"></a>

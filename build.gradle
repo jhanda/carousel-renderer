@@ -1,22 +1,5 @@
 dependencies {
-	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
-	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib"
-	compileOnly 'com.liferay:com.liferay.frontend.taglib'
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
 
-	compileOnly group: "javax.portlet", name: "portlet-api"
-	compileOnly group: "javax.servlet", name: "javax.servlet-api"
-	compileOnly group: "jstl", name: "jstl"
-	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
-
-
-	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib", version: "3.5.0"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.api"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.content.api"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.type.simple"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.frontend.taglib"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.api"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.currency.api"
-	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.taglib"
-
-	compile group: 'com.liferay.portal', name: 'release.dxp.bom', version: '7.3.10', ext: 'pom'
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
 }
